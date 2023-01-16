@@ -11,10 +11,10 @@ client.commands = new Discord.Collection()
 client.aliases = new Discord.Collection()
 fs.readdir('./commands/', (err, files) => { 
   if (err) console.error(err);               
-  console.log(`[ TheTomenTosa Dev. Komutlar ] ${files.length} komut yüklenecek.`)
+  console.log(`[ Virtual Dev. Komutlar ] ${files.length} komut yüklenecek.`)
   files.forEach(f => {                    
     let props = require(`./commands/${f}`)
-    console.log(`[ TheTomenTosa Dev. Komutlar ] ${props.config.name} komutu yüklendi.`)
+    console.log(`[ Virtual Dev. Komutlar ] ${props.config.name} komutu yüklendi.`)
     client.commands.set(props.config.name, props)
     props.config.aliases.forEach(alias => {       
       client.aliases.set(alias, props.config.name)
@@ -41,16 +41,16 @@ client.on("guildMemberAdd", member => {
       if(üs) {
         üyesayısı = üyesayısı.replace(/([0-9])/g, d => {
           return {
-            '0': `<a:rk0:974756413089910784>`,
-            '1': `<a:rk1:974755563072270387>`,
-            '2': `<a:rk2:974755622392320090>`,
-            '3': `<a:rk3:974755650263482438>`,
-            '4': `<a:rk4:974755751400722522>`, 
-            '5': `<a:rk5:974756312401465415>`,
-            '6': `<a:rk6:974756332295049277>`,
-            '7': `<a:rk7:974756352712900660>`,
-            '8': `<a:rk8:974756372044460063>`,
-            '9': `<a:rk9:974756392995004476>`}[d];})}
+            '0': `<a:rk0:1064655300579303565>`,
+            '1': `<a:rk1:1064655311593541672>`,
+            '2': `<a:rk2:1064655325518635068>`,
+            '3': `<a:rk3:1064655333873696880>`,
+            '4': `<a:rk4:1064655344661442610>`, 
+            '5': `<a:rk5:1064655354849415229>`,
+            '6': `<a:rk6:1064655364521472042>`,
+            '7': `<a:rk7:1064655385220358187>`,
+            '8': `<a:rk8:1064655400214986845>`,
+            '9': `<a:rk9:1064655412521091143>`}[d];})}
     const kanal = member.guild.channels.cache.find(r => r.id === (ayarlar.hosgeldinKanal)); 
     let user = client.users.cache.get(member.id);
     require("moment-duration-format");
@@ -74,7 +74,7 @@ member.roles.add(ayarlar.kayıtsızRol)
 > 
 > <a:eyesshaking:974117161738043432> **`+kontrol+`**
 >     
-> <a:pin:974120179539804211> **Ceza işlemlerin <#870747209124184064> kanalını okuduğun varsayılarak uygulanır.**`)});
+> <a:pin:974120179539804211> **Ceza işlemlerin <#1059421998381535264> kanalını okuduğun varsayılarak uygulanır.**`)});
 
 client.on("ready", () => {
   client.channels.cache.get(ayarlar.botSesKanal).join();
@@ -120,6 +120,6 @@ client.on("userUpdate", async function(oldUser, newUser) {
 
 //----------------------------------------------------- GİRİŞ ------------------------------------------------\\
 
-client.login(process.env.TOKEN)
+client.login("MTA2NDYyNTM4OTg0ODI1MjUyMA.GwsSwr.7qO_L0BN5oCWAzmupA57tEq8mACD4QpZNa6Y8U")
 
 //----------------------------------------------------- GİRİŞ ------------------------------------------------\\
